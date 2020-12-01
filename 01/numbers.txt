@@ -1,4 +1,4 @@
-numbers = """1408
+1408
 1335
 1648
 1458
@@ -197,14 +197,4 @@ numbers = """1408
 1941
 1977
 1775
-1529""".split("\n")
-
-numbers = [int(n) for n in sorted(numbers)]
-
-for i, n in enumerate(numbers):
-  for j, n2 in enumerate(numbers):
-    if i == j:
-      continue
-    if n + n2 == 2020:
-      print(f"{n * n2 = }")
-      break
+1529
