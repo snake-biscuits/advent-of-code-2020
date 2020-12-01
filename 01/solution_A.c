@@ -3,8 +3,8 @@
 
 
 int get_numbers(char* filename, int* output) {
-    /* reads newline separated numbers from filename,
-     * places them into output_list,
+    /* reads numbers from filename,
+     * saves them in output,
      * returns the number of lines read */
     FILE *file;
 
@@ -14,24 +14,11 @@ int get_numbers(char* filename, int* output) {
 	return -1;
     }
 
-    char buffer[1];
-    int count = 0;  // the number of lines read
-    int i = 0;
-    char number[4] = "    ";
-    while (fgets(buffer, 1, file) != NULL) {
-    	if (buffer == "\n") {
-	    output[count] = atoi(number);
-	    number[0] = " ";  // pointers
-	    number[1] = " ";  // make
-	    number[2] = " ";  // me
-	    number[3] = " ";  // hurt
-	    count += 1;
-	    i = 0;
-    	}
-	else {
-	    number[i] = buffer;  // google C string operations (or get a segfault again)
-	    i += 1;
-	}
+    char buffer[8];
+    int count = 0;  // lines read
+    while (fgets(buffer, 8, file) != NULL) {
+	    output[count] = atoi(buffer);
+	    count++;
     }
     fclose(file);
     return count;
