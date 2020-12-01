@@ -1,14 +1,10 @@
-with open("numbers.txt") as file:
-    numbers = [int(n) for n in file.readlines()]
+import get_numbers
 
 
-def main():
-    for i, x in enumerate(numbers):
-        for j in range(i + 1, len(numbers)):
-            y = numbers[j]
+if __name__ == "__main__":
+    for i, x in enumerate(get_numbers.numbers):
+        for j in range(i + 1, len(get_numbers.numbers)):
+            y = get_numbers.numbers[j]
             if x + y == 2020:
                 print(f"{x} * {y} = {x * y}")
-                return
-
-
-main()
+                break

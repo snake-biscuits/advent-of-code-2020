@@ -10,13 +10,17 @@ int main(void) {
 
     int i, x;
     int j, y;
+	int k, z;
     for (i=0; i<len_numbers; i++) {
     	x = numbers[i];
 		for (j=i+1; j<len_numbers; j++) {
 			y = numbers[j];
-			if (x + y == 2020) {
-				printf("%i * %i = %i\n", x, y, x * y);
-			return 0;
+			for (k=j+1; k<len_numbers; k++) {
+                z = numbers[k];
+				if (x + y + z == 2020) {
+					printf("%i * %i * %i = %i\n", x, y, z, x * y * z);
+				    return 0;
+				}
 			}
 		}
     }
