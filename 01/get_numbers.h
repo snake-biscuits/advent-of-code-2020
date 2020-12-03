@@ -15,11 +15,11 @@ int get_numbers(char* filename, int* output) {
     }
 
     char buffer[8];
-    int count = 0;  // lines read
+    int lines_read = 0;
     while (fgets(buffer, 8, file) != NULL) {
-	    output[count] = atoi(buffer);
-	    count++;
+	    output[lines_read] = atoi(buffer);
+	    lines_read++;
     }
     fclose(file);
-    return count;
+    return lines_read;
 }
