@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int get_lines(char* filename, char** output) {  // note: char (*output[LINE_MAX])[STRING_MAX];
+int get_lines(char* filename, char* output[]) {  // note: char (*output[LINE_MAX])[STRING_MAX];
 	/* reads lines from filename,
      * saves them to output,
      * returns the number of lines read */
