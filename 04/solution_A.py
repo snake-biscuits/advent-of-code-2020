@@ -28,4 +28,4 @@ for passport in passports:
     if set(passport.keys()).intersection(required_fields) == required_fields:
         valid_count += 1
 
-print(f"Found {valid_count} valid passports")
+print(f"Found {valid_count} valid passports")  # 256

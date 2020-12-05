@@ -1,5 +1,9 @@
+import math
+
+
 with open("track.txt") as file:
     track = [line.rstrip("\n") for line in file]
+
 
 def check_slope(track=track, right=3, down=1):
     track_width = len(track[0])  # track tiles to the right
@@ -9,6 +13,7 @@ def check_slope(track=track, right=3, down=1):
         if row[x] == "#":
             trees_hit += 1
     return trees_hit
+
 
 slope_1 = {"right": 1, "down": 1}
 slope_2 = {"right": 3, "down": 1}
@@ -23,5 +28,4 @@ slope_strings = [", ".join([f"{k} {v}" for k, v in d.items()]) for d in all_slop
 for count, slope in zip(runs, slope_strings):
     print(f"Hit {count} trees along {slope}")
 
-import math
-print(f"Product of all runs is: {math.prod(runs)}")
+print(f"Product of all runs is: {math.prod(runs)}")  # 2122848000
