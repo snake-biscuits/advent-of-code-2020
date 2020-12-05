@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define MAX_LINE_LENGTH 1024
 
 
-int get_lines(char* filename, char* output[]) {  // note: char (*output[LINE_MAX])[STRING_MAX];
+int get_lines(char *filename, char **output) {
 	/* reads lines from filename,
      * saves them to output,
      * returns the number of lines read */
@@ -13,13 +16,16 @@ int get_lines(char* filename, char* output[]) {  // note: char (*output[LINE_MAX
 	return -1;
     }
 
-    char buffer[1024]; // if line is longer than 1024 chars, it will be split
+    char buffer[MAX_LINE_LENGTH];
     int lines_read = 0;
-    while (fgets(buffer, 1024, file) != NULL) {
+    while (fgets(buffer, MAX_LINE_LENGTH, file) != NULL) {
+        output[lines_read] = malloc(MAX_LINE_LENGTH);  /* MUST INITIALISE THE POINTER! */
 	    strcpy(output[lines_read], buffer);
 	    lines_read++;
     }
     fclose(file);
+
+    strcpy(output[lines_read + 1], "\0");
 
     return lines_read;
 }
