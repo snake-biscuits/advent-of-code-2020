@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>  /* printf */
 #include "get_numbers.h"
 
 int main(void) {

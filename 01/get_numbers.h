@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>  /* printf, fopen, fclose, fgets */
+#include <stdlib.h>  /* atoi */
 
 
 int get_numbers(char* filename, int* output) {

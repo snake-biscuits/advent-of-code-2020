@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>  /* printf */
+#include <stdlib.h>  /* atoi */
+#include <string.h>  /* strcpy */
 #include "../common/get_lines.h"
 
 
