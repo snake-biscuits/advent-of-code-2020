@@ -25,4 +25,4 @@ while len(tier) > 0:
     tier = set(itertools.chain(*[nodes[b] for b in tier]))
     generations += 1
 
-print(f"shiny gold bag has {len(ancestors)} total ancestors across {generations} generations")
+print(f"shiny gold bag has {len(ancestors)} total ancestors across {generations} generations")  # 272
