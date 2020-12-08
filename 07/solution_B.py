@@ -22,10 +22,7 @@ def contents_of(bag_colour):
     for child, quantity in nodes[bag_colour].items():
         total += quantity + (quantity * contents_of(child))
     print(bag_colour, "contains:", total, "bags")
-    return total if total != 0 else 1
+    return total
 
 
-print(f"shiny gold bag can contain a total of {contents_of('shiny gold')} bags")
-# 145043 too low
-# 317289 wrong
-# 172247 too high
+print(f"shiny gold bag can contain a total of {contents_of('shiny gold')} bags")  # 172246
