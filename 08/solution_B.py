@@ -7,6 +7,7 @@ def run_asm(code):
     executed = set()
     pc = 0
     while pc not in executed:
+        executed.add(pc)
         func, arg = code[pc]
         if func == "acc":
             acc += arg
@@ -24,9 +25,11 @@ def run_asm(code):
     return  # run failed
 
 
-flipped_instructions = set()
-for flippable in run_asm(instructions):  # the yielded
-    modded_code = instructions
-    flipped = (??? if f else ???, a for f, a in modded_code[flippable])
-    modded_code[flippable] = flipped
+for index_to_flip in run_asm(instructions):  # the yielded
+    modded_code = instructions.copy()
+    func, arg = instructions[index_to_flip]
+    if (func, arg) == ("nop", 0):
+        continue  # don't flip: nop 0
+    func = "jmp" if func == "nop" else "nop"
+    modded_code[index_to_flip] = (func, arg)
     run = list(run_asm(modded_code))
