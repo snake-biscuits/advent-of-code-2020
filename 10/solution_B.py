@@ -1,6 +1,3 @@
-import math
-
-
 with open("adapters.txt") as file:
     adapters = sorted([int(i) for i in file])
 
@@ -15,4 +12,4 @@ for node, next_node in zip(adapters, [*adapters[1:], last]):
             possible_solutions += 2
     previous = node
 
-# 2027 too low
+print(possible_solutions)  # 2027 too low
