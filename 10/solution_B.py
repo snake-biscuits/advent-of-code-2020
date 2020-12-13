@@ -7,9 +7,9 @@ last = max(adapters) + 3
 for node, next_node in zip(adapters, [*adapters[1:], last]):
     if node - previous == 1:
         if next_node - previous == 3:  # current node can be skipped
-            possible_solutions += 1
-        if next_node - previous < 3:
-            possible_solutions += 2
+            possible_solutions *= 2  # 2 branches: with, without
+        # if next_node - previous < 3:
+        #     possible_solutions += 2
     previous = node
 
 print(possible_solutions)  # 2027 too low
