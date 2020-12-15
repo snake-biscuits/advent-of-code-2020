@@ -14,4 +14,4 @@ for i in range(len(puzzle_input) + 1, 2020 + 1):
     occurences[x].append(i)
     last = x
 
-print(f"The 2020th number spoken in {x}")
+print(f"The 2020th number spoken in {x}")  # 1665

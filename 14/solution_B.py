@@ -5,7 +5,6 @@ with open("program.txt") as file:
     instructions = [line for line in file]
 
 
-
 def floating(x, bitmask):
     # print("=" * 40)
     base = [b if o == "X" else o for b, o in zip(f"{x:#038b}"[2:], bitmask)]
@@ -24,7 +23,7 @@ def floating(x, bitmask):
                 j += 1
             else:
                 floating_address.append(b)
-            
+
         # print(f"0b{''.join(floating_address)}")
         yield int(f"0b{''.join(floating_address)}", 2)
 

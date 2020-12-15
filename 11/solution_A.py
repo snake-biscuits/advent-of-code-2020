@@ -38,4 +38,4 @@ while this_turn != previous_turn:
                 else:
                     this_turn[i] += space
 
-print(f"{''.join(this_turn).count('#')} seats filled")
+print(f"{''.join(this_turn).count('#')} seats filled")  # 2406

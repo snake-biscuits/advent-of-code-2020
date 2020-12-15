@@ -26,4 +26,4 @@ for approach, units in directions:
     elif approach == "F":
         x, y = [a + (b * units) for a, b in zip((x, y), direction)]
 
-print(f"Manhattan distance from start is {abs(x) + abs(y)}")
+print(f"Manhattan distance from start is {abs(x) + abs(y)}")  # 1186

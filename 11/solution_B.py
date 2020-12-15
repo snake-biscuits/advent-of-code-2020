@@ -47,4 +47,4 @@ while this_turn != previous_turn:
         else:
             this_turn[seat] = occupancy
 
-print(f"{''.join(this_turn.values()).count('#')} seats filled")
+print(f"{''.join(this_turn.values()).count('#')} seats filled")  # 2149

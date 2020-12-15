@@ -12,4 +12,4 @@ for node, next_node in zip(adapters, [*adapters[1:], last]):
         #     possible_solutions += 2
     previous = node
 
-print(possible_solutions)  # 2027 too low
+print(possible_solutions)  # 19208

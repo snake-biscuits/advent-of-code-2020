@@ -15,4 +15,4 @@ for bus_id in bus_ids:
 shortest = min(wait)
 
 print(f"ID of earliest bus: {wait[shortest]}, wait time: {shortest}")
-print(f"Answer: {wait[shortest] * shortest}")
+print(f"Answer: {wait[shortest] * shortest}")  # 222

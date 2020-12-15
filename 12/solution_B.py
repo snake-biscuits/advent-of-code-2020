@@ -28,4 +28,4 @@ for approach, units in directions:
         x, y = [a + (b * units) for a, b in zip((x, y), (wp_x, wp_y))]
     # print(f"{approach}{units} --> {x}E {y}N {(wp_x, wp_y)}")
 
-print(f"Manhattan distance from start is {abs(x) + abs(y)}")
+print(f"Manhattan distance from start is {abs(x) + abs(y)}")  # 47806

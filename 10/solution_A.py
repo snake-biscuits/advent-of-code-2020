@@ -7,4 +7,4 @@ while len(adapters) > 0:
     differences[adapters[0] - previous] += 1
     previous = adapters.pop(0)
 
-print(f"Answer is: {differences[1] * differences[3]}")
+print(f"Answer is: {differences[1] * differences[3]}")  # 1980
