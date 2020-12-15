@@ -7,7 +7,7 @@ with open("program.txt") as file:
 
 def floating(x, bitmask):
     # print("=" * 40)
-    base = [b if o == "X" else o for b, o in zip(f"{x:#038b}"[2:], bitmask)]
+    base = [b if o == "X" else o for b, o in zip(f"{x:038b}"[2:], bitmask)]
     # print(f"0b{''.join(base)}")
     # print(f"--{bitmask}")
     # print("-" * 40)
