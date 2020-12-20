@@ -5,4 +5,3 @@ with open("buses.txt") as file:
 
 delay = {b: i for i, b in enumerate(bus_ids) if b is not None}
 # each bus leaves at t + delay[bus]
-
